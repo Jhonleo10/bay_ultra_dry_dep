@@ -86,7 +86,7 @@ const FloodHero = () => {
                             <img src="/assets/images/star_1.png" alt="" className="w-5 h-5 mt-[-11%] md:mt-0 md:w-8 md:h-8" />
                         </div>
                         <p className="text-[#1D1D1D] text-center max-w-[950px] mx-auto font-medium text-[16px]  leading-[1.6] opacity-75">
-                            From your family's favourite sofa to large-scale commercial seating, our upholstery cleaning service revives fabrics deeply and safely. Our advanced cleaning systems gently yet powerfully lift away embedded dirt, grime, and odours, restoring your furniture's freshness and appearance.
+                            From your family favourite sofa to large-scale commercial seating, our upholstery cleaning service revives fabrics deeply and safely. Our advanced cleaning systems gently yet powerfully lift away embedded dirt, grime, and odours, restoring your furniture freshness and appearance.
                         </p>
                     </div>
                 </div>

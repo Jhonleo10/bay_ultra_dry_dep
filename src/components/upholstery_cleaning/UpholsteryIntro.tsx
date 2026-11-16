@@ -48,7 +48,7 @@ const UpholsteryIntro = () => {
                     data-aos-delay="200"
                     data-aos-duration="1000"
                 >
-                    From your family's favourite sofa to large-scale commercial seating, our upholstery cleaning service revives fabrics deeply and safely. Our advanced cleaning systems gently yet powerfully lift away embedded dirt, grime, and odours, restoring your furniture's freshness and appearance.
+                    From your family favourite sofa to large-scale commercial seating, our upholstery cleaning service revives fabrics deeply and safely. Our advanced cleaning systems gently yet powerfully lift away embedded dirt, grime, and odours, restoring your furniture freshness and appearance.
                 </p>
             </div>
 

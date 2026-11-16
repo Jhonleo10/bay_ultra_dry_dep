@@ -103,7 +103,7 @@ const AboutWhatWeDo: React.FC = () => {
                     data-aos-offset="50"
                 >
                     <p className="text-[#303030] text-[13px] md:text-[15px] lg:text-[16px] font-[500] leading-relaxed">
-                        No matter the size or scope, from a single couch to full office buildings or vehicle fleets, we've got the tools and experience to deliver exceptional results.
+                        No matter the size or scope, from a single couch to full office buildings or vehicle fleets, we have the tools and experience to deliver exceptional results.
                     </p>
                 </div>
             </div>

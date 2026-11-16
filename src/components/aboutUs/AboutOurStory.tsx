@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Star, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Button from "../ui/Button";
 import { useRouter } from "next/navigation";
 const AboutOurStory: React.FC = () => {
@@ -119,7 +119,7 @@ const AboutOurStory: React.FC = () => {
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
-                        "A cleaner space creates a sharper mind. Let us transform your place so you can focus on what truly matters."
+                        A cleaner space creates a sharper mind. Let us transform your place so you can focus on what truly matters.
                     </div>
                 </div>
 

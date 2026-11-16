@@ -175,7 +175,7 @@ const EnquiryPopup = ({ isOpen, onClose }: EnquiryPopupProps) => {
                             Enquire Now
                         </h2>
                         <p className="text-[#1D1D1D] font-[500] opacity-80 text-[14px] sm:text-[15px] md:text-[16px]">
-                            Fill in your details and we'll get back to you shortly.
+                            Fill in your details and we will get back to you shortly.
                         </p>
                     </div>
 

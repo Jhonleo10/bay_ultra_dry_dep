@@ -4,8 +4,18 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 
 export default function FloodTrustBadges() {
+  const getVisibleCardsForWidth = (width: number) => {
+    if (width >= 1280) return 6;
+    if (width >= 1024) return 4;
+    if (width >= 768) return 3;
+    if (width >= 640) return 2;
+    return 1;
+  };
+
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(1);
+  const [visibleCards, setVisibleCards] = useState(() =>
+    typeof window === 'undefined' ? 1 : getVisibleCardsForWidth(window.innerWidth)
+  );
   const touchStart = useRef<number | null>(null);
   const touchEnd = useRef<number | null>(null);
 
@@ -35,10 +45,13 @@ export default function FloodTrustBadges() {
   }, []);
 
   useEffect(() => {
-    handleResize();
+    const handleResize = () => {
+      setVisibleCards(getVisibleCardsForWidth(window.innerWidth));
+    };
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
+  }, []);
 
   // Handle Swipe
   const minSwipeDistance = 50;

@@ -25,7 +25,14 @@ const UpholsteryCleaningSlider = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(services.length);
-    const [visibleCards, setVisibleCards] = useState(3);
+    const getVisibleCardsForWidth = (width: number) => {
+        if (width >= 1024) return 3;
+        if (width >= 768) return 2;
+        return 1;
+    };
+    const [visibleCards, setVisibleCards] = useState(() =>
+        typeof window === "undefined" ? 3 : getVisibleCardsForWidth(window.innerWidth)
+    );
     const [isAnimating, setIsAnimating] = useState(false);
     const [useTransition, setUseTransition] = useState(true);
 
@@ -34,18 +41,11 @@ const UpholsteryCleaningSlider = () => {
 
     const updateVisibleCards = useCallback(() => {
         if (typeof window !== "undefined") {
-            if (window.innerWidth >= 1024) {
-                setVisibleCards(3);
-            } else if (window.innerWidth >= 768) {
-                setVisibleCards(2);
-            } else {
-                setVisibleCards(1);
-            }
+            setVisibleCards(getVisibleCardsForWidth(window.innerWidth));
         }
     }, []);
 
     useEffect(() => {
-        updateVisibleCards();
         window.addEventListener("resize", updateVisibleCards);
         return () => window.removeEventListener("resize", updateVisibleCards);
     }, [updateVisibleCards]);

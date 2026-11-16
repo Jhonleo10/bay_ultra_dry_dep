@@ -175,8 +175,8 @@ const ContactForm = () => {
             <div className="max-w-[1240px] mx-auto relative z-10 px-0 sm:px-4">
                 <div className="text-center mb-14 md:mb-20 relative z-10 pt-1 md:pt-1 mt-[20px] md:mt-0">
                     <p className="text-[#304462] font-sans italic font-medium text-[14px] md:text-[16px] max-w-[800px] mx-auto mb-[30px] md:mb-[80px] px-4" data-aos="fade-up">
-                        "Let our professional cleaning team <br className="block md:hidden" /> make your home or business shine. <br className="hidden md:block" />
-                        Contact us today for a free quote— <br className="block md:hidden" /> fast, friendly, and hassle-free!"
+                        Let our professional cleaning team <br className="block md:hidden" /> make your home or business shine. <br className="hidden md:block" />
+                        Contact us today for a free quote— <br className="block md:hidden" /> fast, friendly, and hassle-free!
                     </p>
 
                     <h2

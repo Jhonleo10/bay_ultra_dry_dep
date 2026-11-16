@@ -17,27 +17,19 @@ const countries = [
 
 const PhoneInput = ({ value, onChange, error, label }: PhoneInputProps) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedCountry, setSelectedCountry] = useState(countries[0]);
-    const [displayNumber, setDisplayNumber] = useState("");
     const containerRef = useRef<HTMLDivElement>(null);
 
-    // Sync display number from total phone value
-    useEffect(() => {
-        if (!value) {
-            setDisplayNumber("");
-            return;
+    const getLocalNumber = (phoneValue: string, country: typeof countries[0]) => {
+        if (!phoneValue) return "";
+        const normalized = phoneValue.replace(/\s+/g, "");
+        if (normalized.startsWith(country.code)) {
+            return normalized.slice(country.code.length).replace(/\D/g, "");
         }
+        return normalized.replace(/\D/g, "");
+    };
 
-        // Try to find matching country code in value
-        const match = countries.find(c => value.startsWith(c.code));
-        if (match) {
-            setSelectedCountry(match);
-            setDisplayNumber(value.slice(match.code.length).replace(/\s+/g, ""));
-        } else {
-            // Default to first country if no match (e.g., initial state)
-            setDisplayNumber(value.replace(/\s+/g, ""));
-        }
-    }, [value]);
+    const selectedCountry = countries.find((country) => value.startsWith(country.code)) ?? countries[0];
+    const displayNumber = getLocalNumber(value, selectedCountry);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -53,18 +45,13 @@ const PhoneInput = ({ value, onChange, error, label }: PhoneInputProps) => {
         const input = e.target.value.replace(/\D/g, ""); // Only allow digits
         if (input.length > selectedCountry.max) return;
 
-        setDisplayNumber(input);
         onChange(`${selectedCountry.code}${input}`);
     };
 
     const handleCountrySelect = (country: typeof countries[0]) => {
-        setSelectedCountry(country);
         setIsOpen(false);
-        // Reset current value if swapping country
-        // Actually, just update code and keep number if valid or within max
-        const newNumber = displayNumber.slice(0, country.max);
-        setDisplayNumber(newNumber);
-        onChange(`${country.code}${newNumber}`);
+        const nextDigits = getLocalNumber(value, country).slice(0, country.max);
+        onChange(`${country.code}${nextDigits}`);
     };
 
     return (

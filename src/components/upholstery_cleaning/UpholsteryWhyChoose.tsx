@@ -73,7 +73,7 @@ const UpholsteryWhyChoose = () => {
                         data-aos="fade-up"
                         data-aos-delay="600"
                     >
-                        "From family furniture to full commercial seating — we've got the tools and know-how to get it clean."
+                        From family furniture to full commercial seating, we have the tools and know-how to get it clean.
                     </p>
                 </div>
             </div>

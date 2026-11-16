@@ -114,7 +114,7 @@ const FloodRestorationProcess = () => {
                             className="mt-2"
                         >
                             <p className="font-nunito text-[#1D1D1D] italic font-normal text-[13px] md:text-[14px] lg:text-[15px] leading-[1.6] max-w-[500px]">
-                                "Flooding doesn't wait — and neither do we. We'll be there fast to protect your property."
+                                Flooding does not wait, and neither do we. We will be there fast to protect your property.
                             </p>
                         </div>
                     </div>

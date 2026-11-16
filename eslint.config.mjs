@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local utility scripts are not part of the app runtime and are intentionally written as CommonJS.
+    "check_*.js",
+    "test_*.js",
   ]),
 ]);
 

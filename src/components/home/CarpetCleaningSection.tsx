@@ -113,7 +113,7 @@ const CarpetCleaningSection = () => {
                                     variants={fadeUp}
                                     className="text-[#2C2C2C] text-[16px] md:text-[15px] font-medium leading-[1.6] max-w-[650px]"
                                 >
-                                    Experience a deeper, faster-drying carpet clean with our powerful industrial-grade equipment. Get back to your routine in hours, not days. Perfect for protecting your home's air quality, refreshing rental properties, and maintaining professional business environments.
+                                    Experience a deeper, faster-drying carpet clean with our powerful industrial-grade equipment. Get back to your routine in hours, not days. Perfect for protecting your home air quality, refreshing rental properties, and maintaining professional business environments.
                                 </motion.p>
                                 <motion.p
                                     variants={fadeUp}

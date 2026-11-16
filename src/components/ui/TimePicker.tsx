@@ -33,7 +33,8 @@ const TimePicker = ({ value, onChange, error, label }: TimePickerProps) => {
 
     const formatTimeTo24h = (timeStr: string) => {
         const [time, modifier] = timeStr.split(" ");
-        let [hours, minutes] = time.split(":");
+        const [hoursPart, minutes] = time.split(":");
+        let hours = hoursPart;
         if (hours === "12") hours = "00";
         if (modifier === "PM") hours = (parseInt(hours, 10) + 12).toString();
         return `${hours.padStart(2, '0')}:${minutes}`;
